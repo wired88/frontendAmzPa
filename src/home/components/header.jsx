@@ -6,7 +6,6 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import final_logo from "../../assets/final_logo.png";
 import {Envelope} from "react-bootstrap-icons";
-import React from "react";
 
 function NavScrollExample() {
   return (

@@ -3,10 +3,9 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import mainHome from "../../assets/mainHome.jpg";
 import ProductContainer from "./homeProductContainer.jsx";
-import {useEffect, useRef} from "react";
+import {useEffect} from "react";
 
 function Main() {
-    const ref = useRef();
 
     const handleSubmit = async (e) =>  {
         e.preventDefault();
