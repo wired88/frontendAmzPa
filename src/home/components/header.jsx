@@ -19,12 +19,7 @@ function NavScrollExample() {
                 navbarScroll >
             <div style={{width: "10vmin"}}></div>
             <NavDropdown title="Clothing" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action4">
-                Nike
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action4">
-                Addidas
-              </NavDropdown.Item>
+              OFFICIAL AMAZON PARTNER
               <NavDropdown.Divider />
             </NavDropdown>
             <Nav.Link href="#action2">Amazon</Nav.Link>
