@@ -24,7 +24,7 @@ function Header() {
               <img className={"amzSmile"} src={amzSmile} alt="smile.png"/>
             </div>
           </Nav>
-          <Nav.Link href={"http://localhost:5173/contact"} style={{color: "rgba(255, 255, 255, .8)"}}>
+          <Nav.Link href={"/contact"} style={{color: "rgba(255, 255, 255, .8)"}}>
             Contact us
             <Envelope style={{margin: "auto 5px", marginRight: "5vmin"}}/>
           </Nav.Link>
