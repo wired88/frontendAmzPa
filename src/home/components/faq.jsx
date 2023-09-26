@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component, useEffect} from 'react';
 import Faq from 'react-faq-component';
 
 const data = {
@@ -41,6 +41,10 @@ const data = {
 }
 
 function FAQ() {
+  useEffect(() => {
+    document.title = 'FAQ';
+  }, []);
+
   return (
     <div className={"faq_container"}>
       <Faq data={data}/>

@@ -1,6 +1,11 @@
 import ProductElement from "./productElement.jsx";
+import {useEffect} from "react";
 
 function SearchResult() {
+  useEffect(() => {
+    document.title = 'Deals';
+  }, []);
+
   return(
     <>
     <div className={"searchResultMain"}>

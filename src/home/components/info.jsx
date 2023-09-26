@@ -1,4 +1,12 @@
+import {useEffect} from "react";
+
+
+
 function Info() {
+  useEffect(() => {
+    document.title = 'Info';
+  }, []);
+
     return(
         <div className={"infoContainer"}>
             <div className={"infoContainerGRID1"}>

@@ -6,6 +6,10 @@ import SuccessModal from "./successModal.jsx";
 
 const ContactForm = () => {
 
+  useEffect(() => {
+    document.title = 'Contact the Detective';
+  }, []);
+
   const [submit, setSubmit] = React.useState(false);
   const [seconds, setSeconds] = React.useState(2.2);
   const [status, setStatus] = React.useState(null);
