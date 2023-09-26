@@ -138,8 +138,8 @@ const ContactForm = () => {
               </button>
               <div className={"alternative_mail_container"}>
               <p>
-                Problems with Contact form? Send us directly a E-Mail:
-                <span style={{color: "rgb(255, 0, 0)"}}>info@sales-detective.info</span>
+                Problems with Contact form? Send us your E-Mail directly:
+                <span style={{color: "rgb(255, 0, 0)"}}>&nbsp;info@sales-detective.info</span>
               </p>
                 </div>
             </div>

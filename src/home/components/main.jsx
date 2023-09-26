@@ -65,8 +65,6 @@ function Main() {
               <ProductContainer imgSrc={mainHome} title={"Test4"} />
               <ProductContainer imgSrc={mainHome} title={"Test5"} />
               <ProductContainer imgSrc={mainHome} title={"Test6"} />
-              <ProductContainer imgSrc={mainHome} title={"Test7"} />
-              <ProductContainer imgSrc={mainHome} title={"Test8"} />
                 </div>
             </div>
         </div>

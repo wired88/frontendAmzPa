@@ -30,7 +30,9 @@ function SearchResult() {
         <p>
           Wichtige Informationen:
 Wir erhalten ggf. eine Provision, falls Sie einen Kauf über die Links auf unserer Seite tätigen.
-          Dies hat keine Auswirkungen auf die Platzierung der Produkte auf unserer Seite. Unsere Seite arbeitet mit dem Amazon EU Partner-/Affiliateprogramm zusammen. Amazon, Amazon Prime, das Amazon Logo and Amazon Prime Logo sind eingetragene Warenzeichen von Amazon, Inc. oder dessen Partnern.
+          Dies hat keine Auswirkungen auf die Platzierung der Produkte auf unserer Seite.
+          Unsere Seite arbeitet mit dem Amazon EU Partner-/Affiliateprogramm zusammen. Amazon, Amazon Prime,
+          das Amazon Logo and Amazon Prime Logo sind eingetragene Warenzeichen von Amazon, Inc. oder dessen Partnern.
 
 Bitte beachten Sie zudem folgende wichtige Hinweise:
 1. Der angezeigte Preis könnte seit der letzten Aktualisierung gestiegen sein.
