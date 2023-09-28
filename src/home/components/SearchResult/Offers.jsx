@@ -1,7 +1,7 @@
-import ProductElement from "./productElement.jsx";
+import SingleOffer from "./singleOffer.jsx";
 import {useEffect} from "react";
 
-function SearchResult() {
+function Offers() {
   useEffect(() => {
     document.title = 'Deals';
   }, []);
@@ -19,16 +19,16 @@ function SearchResult() {
         </p>
       </div>
       <div className={"searchResultContent"}>
-        <ProductElement number={"1"} style={{gridRow: "1"}} />
-        <ProductElement number={"2"} style={{gridRow: "2"}} />
-        <ProductElement number={"3"} style={{gridRow: "3"}}/>
-        <ProductElement number={"4"} style={{gridRow: "4"}}/>
-        <ProductElement number={"5"} style={{gridRow: "5"}}/>
-        <ProductElement number={"6"} style={{gridRow: "6"}}/>
-        <ProductElement number={"7"} style={{gridRow: "7"}}/>
-        <ProductElement number={"8"} style={{gridRow: "8"}}/>
-        <ProductElement number={"9"} style={{gridRow: "9"}}/>
-        <ProductElement number={"10"} style={{gridRow: "10"}}/>
+        <SingleOffer number={"1"} />
+        <SingleOffer number={"2"} />
+        <SingleOffer number={"3"} />
+        <SingleOffer number={"4"} />
+        <SingleOffer number={"5"} />
+        <SingleOffer number={"6"} />
+        <SingleOffer number={"7"} />
+        <SingleOffer number={"8"} />
+        <SingleOffer number={"9"} />
+        <SingleOffer number={"10"} />
       </div>
     </div>
       <div className={"infoTextContentPage"}>
@@ -54,4 +54,4 @@ Fussnoten:
     </>
   );
 }
-export default SearchResult;
+export default Offers;
