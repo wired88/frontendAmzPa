@@ -447,11 +447,7 @@ li {
     grid-template-columns: 80vw;
 }
 
-.searchResultMain div {
-    width: 100%;
-    height: 100%;
-    display: flex;
-}
+
 
 .searchResultHeader {
     grid-row: 1;
@@ -472,23 +468,103 @@ li {
 }
 
 
+.productImageContainer {
+    padding: 1%;
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    justify-content: space-between;
+    }
 
-
-.productElement {
-    height: 24vmin;
+.productImage {
     width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+    z-index: 5;
+    }
+
+.productIndex {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1;
+    grid-row: 1;
+    z-index: 4;
+    background-color: rgba(0, 0, 0, .2);
+    }
+.productElement {
     display: grid;
-    grid-template-rows: 100%;
-    grid-template-columns: 10% 60% 15% 15%;
+    grid-template-columns: 4vw 24vw 52vw;
+    grid-template-rows: 35vh;
     margin-bottom: 2vh;
-    position: relative;
     transition: 1s ease-in-out;
 }
 
+.informationContainer {
+    grid-column: 3;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    background-color: rgb(52, 58, 64);
+}
 
+.ul-container {
+    grid-column: 1;
+    display: flex;
+    flex-direction: column;
+}
 
+.productHeading {
+    padding: 5px 20% 5px 1%;
 
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+.headerText {
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, .95);
+}
+.ul {
+    height: 23vh;
+    bottom: 0;
+}
+.ul ul li {
+    color: rgba(255, 255, 255, .85);
+}
+.recensionsContainer {
+    grid-column: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+.recensionsContainer > * {
+    z-index: 8;
+}
+.recensionsContainer svg {
+    height: 10px;
+    width: 10px;
+}
 
+.amazonLogo {
+    width: 60%;
+    height: 15%;
+}
+.stars {
+    width: 50%;
+    height: 20%;
+}
+
+.informationContainer button {
+    border-radius: 21px;
+    background-color:  rgb(255,153,0);
+    font-size: 90%;
+    padding: .2rem .6rem;
+    color: white;
+}
 
 /*
 bg linear g4radient 2
@@ -523,7 +599,7 @@ bg linear g4radient 2
         align-items: center;
 
         grid-column: 1;
-        grid-row: 1;^^
+        grid-row: 1;
         z-index: 4;
         background-color: rgba(0, 0, 0, .2);
     }
@@ -534,10 +610,9 @@ bg linear g4radient 2
         background-color: rgb(52, 58, 64);
         flex-direction: column;
         padding: 5% 3%;
-
     }
 
-    .ul-contsiner {
+    .ul-container {
         border-radius: 0 0 14px 14px;
     }
     .informationContainer div {
@@ -545,6 +620,7 @@ bg linear g4radient 2
         justify-content: flex-start;
         align-items: center;
     }
+
     .recensionsContainer {
         justify-content: center;
         flex-direction: column;
@@ -579,21 +655,8 @@ evtl das bild über den gesammtdén bildschirm und info text opacite: 4 wenn hov
 }
 
 
-.productElement div {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.infoTextContentPage {
-
-}
 
 
-.action_btn {
-    position: relative;
-    padding: 1rem 3rem;
-    background-color: rgb(255, 253, 0);
-}
+
+
 
