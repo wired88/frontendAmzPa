@@ -1,4 +1,4 @@
-import React, {Component, useEffect} from 'react';
+import {useEffect} from 'react';
 import Faq from 'react-faq-component';
 
 const data = {
@@ -24,7 +24,7 @@ const data = {
     },
     {
       title: "What happened if I click on a Link?",
-      content: "If you click on a link you will directly redirected to the Product of the official Amazon-Website."
+      content: "If you click on a link you will directly redirected to the Product on the official Amazon-Website."
     },
     {
       title: "How do we protect the privacy of our customers?",
@@ -32,7 +32,7 @@ const data = {
         'We have summarized the information on data protection for you <a class="faq_anchor" href="/privacy-policy">here</a>'
     },
     {
-      title: 'How can in contact you with my questions or concerns?',
+      title: 'How can i contact you?',
       content: 'Of course, we attach great importance to the satisfaction of our customers. \n' +
         'Please do not hesitate to contact us with any concerns via the <a class="faq_anchor" href="/contact">contact form</a> or directly by E-Mail: "info@sales-detective.live". \n' +
         "A member of our team will contact you as soon as possible."

@@ -8,6 +8,7 @@ import ContactForm from "./home/components/contact.jsx";
 import Info from "./home/components/info.jsx";
 import FAQ from "./home/components/faq.jsx";
 import Offers from "./home/components/SearchResult/Offers.jsx";
+import NotFound from "./home/components/404.jsx";
 
 function App() {
     return(
@@ -21,6 +22,7 @@ function App() {
                 <Route path="imprint" element={<Info />} />
                 <Route path="offers" element={<Offers />} />
                 <Route path="faq" element={<FAQ />} />
+                <Route path="*" element={<NotFound />} />
             </Routes>
             <Footer/>
         </Router>

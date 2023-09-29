@@ -46,10 +46,9 @@ function Main() {
                     placeholder="Search. . ."
                     className="me-2"
                     aria-label="Search"
-                    style={{width: "30vw"}}
                     id={"search"}
                   />
-                  <Button variant="dark" className={"search_button"} type={"submit"}>Search</Button>
+                  <Button variant="dark" id={"search_button"} className={"search_button"} type={"submit"}>Search</Button>
                 </Form>
             </div>
             <div className={"mainContainerGRID2"}>

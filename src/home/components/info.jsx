@@ -23,7 +23,7 @@ function Info() {
                   <li>
                     Address: Klingestraße 22, 01159 Dresden, Germany
                   </li>
-                  <li></li>
+                  <br/>
                     <p>
                       If you have any problems please fill out <a href="http://localhost:5173/contact/">this</a> Contact form.
                       Someone from our Team will contact you as soon as possible.

@@ -24,10 +24,10 @@ function Header() {
               <img className={"amzSmile"} src={amzSmile} alt="smile.png"/>
             </div>
           </Nav>
-          <Nav.Link href={"/faq"} style={{color: "rgba(255, 255, 255, .8)", marginRight: "5vmin"}}>
+          <Nav.Link href={"/faq"} id={"faqField"} style={{color: "rgba(255, 255, 255, .8)", marginRight: "5vmin"}}>
             FAQ
           </Nav.Link>
-          <Nav.Link href={"/contact"} style={{color: "rgba(255, 255, 255, .8)"}}>
+          <Nav.Link href={"/contact"} id={"contactField"} style={{color: "rgba(255, 255, 255, .8)"}}>
             Contact us
             <Envelope style={{margin: "auto 5px", marginRight: "5vmin"}}/>
           </Nav.Link>
@@ -38,7 +38,7 @@ function Header() {
               className="me-2"
               aria-label="Search"
             />
-            <Button variant="outline-success">Search</Button>
+            <Button variant="outline-primary">Search</Button>
           </Form>
         </Navbar.Collapse>
       </Container>
