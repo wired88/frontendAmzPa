@@ -474,6 +474,7 @@ li {
     grid-row: 1;
     display: flex;
     justify-content: space-between;
+    overflow: hidden;
     }
 
 .productImage {
@@ -514,20 +515,34 @@ li {
     grid-column: 1;
     display: flex;
     flex-direction: column;
+
 }
 
 .productHeading {
-    padding: 5px 20% 5px 1%;
+    padding: 2% 10% 5px 1%;
+    overflow: hidden;
+    height: 20vh;
+    border-bottom: 1px solid rgba(255, 255, 255, .14);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    white-space: nowrap;
 
-    border-bottom: 1px solid rgba(0, 0, 0, .1);
+
 }
 .headerText {
-    font-size: 1.4rem;
+    font-size: .2rem;
     color: rgba(255, 255, 255, .95);
 }
 .ul {
     height: 23vh;
-    bottom: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+.ul ul  {
+    list-style: initial;
+
 }
 .ul ul li {
     color: rgba(255, 255, 255, .85);
@@ -535,11 +550,11 @@ li {
 .recensionsContainer {
     grid-column: 2;
     display: flex;
-    justify-content: center;
     align-items: center;
     width: 100%;
     height: 100%;
     flex-direction: column;
+
 }
 .recensionsContainer > * {
     z-index: 8;
@@ -579,25 +594,25 @@ bg linear g4radient 2
     }
     .productImageContainer {
         grid-column: 1;
-        grid-row: 1 / 2;
+        grid-row: 1 / 3;
         display: flex;
         justify-content: center;
         align-items: center;
 
     }
+
     .productImage {
         width: 100%;
-        height: 100%;
+        height: 50%;
         object-position: center;
         object-fit: cover;
     }
     .productIndex {
-        width: 10%;
-        height: 100%;
+        width: 40%;
+        height: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
-
         grid-column: 1;
         grid-row: 1;
         z-index: 4;
@@ -611,37 +626,94 @@ bg linear g4radient 2
         flex-direction: column;
         padding: 5% 3%;
     }
-
-    .ul-container {
-        border-radius: 0 0 14px 14px;
-    }
-    .informationContainer div {
+    .informationContainer button {
+    border-radius: 21px;
+    background-color:  rgb(255,153,0);
+    font-size: 60%;
+    padding: .2rem .6rem;
+    color: white;
+    font-weight: bold;
+}
+    .productHeading {
+        padding: 2% 2vw 1% 1%;
+        overflow: hidden;
+        height: 100%;
+        width: 155%;
+        transform: translateX(-40%);
+        border-bottom: 1px solid rgba(255, 255, 255, .14);
         display: flex;
         justify-content: flex-start;
-        align-items: center;
+        align-items: flex-start;
+        white-space: normal;
     }
 
+    .ul-container {
+        height: 21vh;
+        position: relative;
+        width: 100%;
+    }
+
+    .headerText {
+        font-size: .9rem;
+        color: rgba(255, 255, 255, .5)
+    }
     .recensionsContainer {
+        height: 15vh;
         justify-content: center;
         flex-direction: column;
+        bottom: 0;
+        position: relative;
+    }
 
-    }
-    .informationContainer div p {
-        font-size: .5rem;
-    }
-    .informationContainer li {
-        flex-grow: 1;
-    }
-    .informationContainer button {
+    .recensionsContainer button {
         border-radius: 21px;
         background-color:  rgb(255,153,0);
         padding: 5px 15px;
         color: white;
+        bottom: -30vh;
+    }
+    .informationContainer a {
+        bottom: 5px;
+        right: 5px;
     }
     .ul-contsiner:hover::after {
         background: linear-gradient(to bottom, rgba(255,153,0,1), rgba(0,0,0,0.9));
     }
-}
+
+    .amazonLogo {
+        width: 30%;
+        height:20%;
+    }
+    .ul {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        border-bottom: 1px solid rgba(255, 255, 255, .1);
+        height: 16vh;
+    }
+    .ul ul {
+        position: relative;
+        height: 12vh;
+        overflow: hidden;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        list-style-type: none;
+        margin: 0;
+        padding: 2% 3%;
+    }
+    .ul ul li {
+        width: 100%;
+        height: auto;
+        color: rgba(255, 255, 255, .68);
+        font-size: .6rem;
+        border-bottom: 1px solid rgba(0, 0, 0, .1);
+        padding: 0;
+        margin: 0;
+    }
+
+
 
 
 /*
@@ -652,7 +724,7 @@ evtl das bild über den gesammtdén bildschirm und info text opacite: 4 wenn hov
 
 .productElement h2, .productElement h3, .productElement h4, .productElement p {
     color: rgba(255, 255, 255, .95);
-}
+}}
 
 
 
