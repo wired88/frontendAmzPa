@@ -21,8 +21,13 @@ function SingleOffer({number}) {
             slidesToSlide: 1
         }
     };
+
+  const redirect = () => {
+    window.location.href = "https://amazon.com"
+  }
+
   return(
-    <section className={"productElement bg-dark"}>
+    <section className={"productElement bg-dark"} onClick={redirect} style={{cursor: "pointer"}}>
       <div className={"productIndex"}>
         <h4>
           {number}.
@@ -86,6 +91,7 @@ function SingleOffer({number}) {
               <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum?</li>
             </ul>
           </div>
+          <a className={"show_more_a"}   href="#">Show more</a>
         </div>
         <div className={"recensionsContainer"}>
           <img className={"amazonLogo"}    src={amzWhiteLogo} alt="amzImg"/>

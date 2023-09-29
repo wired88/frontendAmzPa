@@ -43,7 +43,7 @@ function Main() {
                 <Form className="d-flex" style={{zIndex: "1"}} onSubmit={handleSubmit}>
                   <Form.Control
                     type="search"
-                    placeholder="Search any Product ..."
+                    placeholder="Search. . ."
                     className="me-2"
                     aria-label="Search"
                     style={{width: "30vw"}}
