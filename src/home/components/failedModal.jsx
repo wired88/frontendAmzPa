@@ -1,31 +1,27 @@
-import { useState } from 'react';
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
+
+import swal from "sweetalert";
 
 function FailedModal() {
-  const [show, setShow] = useState(true);
 
-  const handleClose = () => {
-      setShow(false);
-      window.location.href = "http://localhost:5173/";
+  const redirect = () => {
+      window.location.href = "/contact";
   }
 
   return (
     <>
-      <Modal show={show} onHide={handleClose} animation={false}>
-        <Modal.Header closeButton>
-          <Modal.Title>Failed</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>There was an error while sending the Message. </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Try again
-          </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Go to Homepage
-          </Button>
-        </Modal.Footer>
-      </Modal>
+     {swal({
+        title: "Error" ,
+        text: "Something went wrong :( \n Send us your E-Mail directly to: info@sales-detective.info",
+        icon: "error",
+        dangerMode: true,
+        button: {
+          text: "Try again",
+          value: true,
+          visible: true,
+          className: "",
+          closeModal: true,
+        }}).then(redirect)
+        }, []);
     </>
   );
 }

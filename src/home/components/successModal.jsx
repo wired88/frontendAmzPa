@@ -1,32 +1,26 @@
-import { useState } from 'react';
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
-import { Check } from 'react-bootstrap-icons';
+
+import swal from 'sweetalert';
 
 function SuccessModal() {
-  const [show, setShow] = useState(true);
 
-  const handleClose = () => {
-      setShow(false);
-      window.location.href = "http://localhost:5173/";
+  const redirect = () => {
+      window.location.href = "/";
   }
 
   return (
     <>
-      <Modal show={show} onHide={handleClose} animation={false}>
-        <Modal.Header closeButton>
-          <Modal.Title>Success</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <Check />
-          Your Message has been successfully sent!
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="primary" onClick={handleClose}>
-            Go to Homepage
-          </Button>
-        </Modal.Footer>
-      </Modal>
+      {swal({
+        title: "Success" ,
+        text: "Message send!",
+        icon: "success",
+        button: {
+          text: "Nach Hause",
+          value: true,
+          visible: true,
+          className: "modalButtonSuccess",
+          closeModal: true,
+        }}).then(redirect)
+        }, []);
     </>
   );
 }

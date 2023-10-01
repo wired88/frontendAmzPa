@@ -37,7 +37,7 @@ function SingleOffer({number}) {
         </p>
       </div>
       <div className={"productImageContainer "}>
-        <div style={{width: "100%", height: "50%", overflow: "hidden"}}>
+        <div className={"carouselContainer"} >
             <Carousel
               swipeable={true}
               draggable={true}
@@ -81,7 +81,7 @@ function SingleOffer({number}) {
           <div className={"productHeading"}>
             <p className={"headerText"}>
               Lorem ipsum dolor sit amet,
-              consectetur adipisicing elit. Pariatur, voluptatibus.
+              consectetur adipisicing elit. Pariatur, voluptatibus. Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, ipsum dolor sit amet,
             </p>
           </div>
           <div className={"ul"}>
@@ -91,10 +91,10 @@ function SingleOffer({number}) {
               <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum?</li>
             </ul>
           </div>
-          <a className={"show_more_a"}   href="#">Show more</a>
         </div>
+        <a className={"show_more_a"} href="#">Show more</a>
         <div className={"recensionsContainer"}>
-          <img className={"amazonLogo"}    src={amzWhiteLogo} alt="amzImg"/>
+          <img className={"amazonLogo"} src={amzWhiteLogo} alt="amzImg"/>
           <img className={"stars"} src={stars} alt="star.png"/>
           <button>Watch Offer on Amazon</button>
         </div>
@@ -102,4 +102,5 @@ function SingleOffer({number}) {
     </section>
   );
 }
+
 export default SingleOffer;

@@ -3,6 +3,7 @@ import axios from "axios";
 import ReactLoading from 'react-loading';
 import {Envelope} from "react-bootstrap-icons";
 import SuccessModal from "./successModal.jsx";
+import FailedModal from "./failedModal.jsx";
 
 const ContactForm = () => {
 
@@ -30,9 +31,8 @@ const ContactForm = () => {
           return prevSeconds - 1;
         }
       });
-    }, 1000);
+    }, 1000);}
   }
-}
 
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -50,7 +50,7 @@ const ContactForm = () => {
     console.log("data:" + conFom)
 
     try {
-      const response = await axios.post("http://127.0.0.1:8000/api/contact/", conFom);
+      const response = await axios.post("https://lesterwired.pythonanywhere.com/contact/", conFom);
       console.log("response:" + response);
       const successUrl = response.data.successUrl;
       setForm({...form, successUrl: successUrl});
@@ -77,7 +77,7 @@ const ContactForm = () => {
     <div className="container mt-5">
         {submit ? (
             seconds > 0 ? (
-                <div className="container mt-5">
+                <div className="modal_loadingDiv">
                   <ReactLoading type={"spin"} color={"rgb(0, 0, 255"} height={150} width={150} />
                 </div>
             ) : (
@@ -86,9 +86,9 @@ const ContactForm = () => {
                         <SuccessModal />
                     </div>
                 ) : (
-                    <p>
-                        Something went wrong. Please try again...
-                    </p>
+                  <div className="container mt-5">
+                      <FailedModal />
+                    </div>
                 )
             )
       ) : (
@@ -154,3 +154,16 @@ const ContactForm = () => {
   );
 }
 export default ContactForm;
+
+
+
+  /*
+  {swal({
+        title: "Success" ,
+        text: "Message send!",
+        icon: "success",
+        button: {
+          "value": "Go Home",
+          "onClick": handleClose
+        }})}
+   */
