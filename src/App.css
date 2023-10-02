@@ -1,8 +1,9 @@
-
-
-#root {
+:root {
     --info-text-dark: rgba(0, 0, 0, .9);
     --info-text-light: rgba(255, 255, 255, .7);
+}
+
+#root {
   padding: 0;
   display: grid;
   top: 0;
@@ -113,6 +114,21 @@
     grid-template-columns: 35vw 20vw 35vw;
     border-radius: 15px;
     overflow: hidden;
+    background-color: #212529
+}
+.dark_light_container {
+    position: fixed;
+    width: 15%;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    border: 1px solid #1a1a1a;
+    left: 45%;
+    background-color: #1a1a1a;
+    border-radius: 0 0 15px 15px;
+    z-index: 90;
 }
 
 .infoSectionMain div {
@@ -158,7 +174,9 @@
     position: relative;
     margin-bottom: 5vh;
 }
-
+html {
+    background-color: black;
+}
 .infoSectionMainText {
     font-size: .9rem;
     color: var(--info-text-light);
@@ -186,9 +204,18 @@
     border: 1px solid var(--info-text-dark);
     border-radius: 15px;
     padding: 4vh 2vw;
+    background-color: #212529;
+    color: rgba(255, 255, 255, .8);
 
 }
 
+.dark_mode_button {
+    margin: 0 auto;
+    border: 1px solid black;
+    border-radius: 0;
+    cursor: pointer;
+
+}
 
 
 #search {

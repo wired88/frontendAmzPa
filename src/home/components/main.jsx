@@ -3,11 +3,10 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import mainHome from "../../assets/mainHome.jpg";
 import ProductContainer from "./homeProductContainer.jsx";
-import {useEffect} from "react";
-
+import {useEffect, useState} from "react";
 
 function Main() {
-
+    const [dark_mode_bool, set_dark_mode_bool] = useState(false);
     const handleSubmit = async (e) =>  {
         e.preventDefault();
         const { search } = e.target.elements
@@ -21,6 +20,23 @@ function Main() {
             console.log(error);
             }
           };
+    const dark_mode_function = () => {
+      const reminder = document.querySelector(".reminderContainer");
+      const dark_icon = document.getElementById("offerHeader");
+      const elements = document.querySelectorAll(
+        ".infoSectionMain, .reminderContainer, .dark_light_container")
+
+      elements.forEach((element) => {
+        element.style.backgroundColor = dark_mode_bool ?   "#232121" : "#e8e5e5";
+      });
+
+      reminder.style.color = dark_mode_bool ? "#e8e5e5" : "rgba(0, 0, 0, .8)";
+      dark_icon.style.color = dark_mode_bool ? "rgba(0, 0, 0, .8)" : "#e8e5e5";
+
+      set_dark_mode_bool(!dark_mode_bool);
+      const rootRouter = document.getElementById("root");
+      rootRouter.style.backgroundColor = dark_mode_bool ? "#e8e5e5" : "#212529";
+    }
 
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
@@ -40,6 +56,12 @@ function Main() {
     return(
       <>
         <div className={"mainContainer"}>
+          <div className={"dark_light_container"}>
+            <div className="form-check form-switch">
+            <input onClick={dark_mode_function} className="form-check-input dark_mode_button" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
+          </div>
+          </div>
+
           <div className={"mainContainerGRID1"}>
               <img src={mainHome} className={"mainHomeIMG"} alt="main.png"/>
               <Form className="d-flex" style={{zIndex: "1"}} onSubmit={handleSubmit}>
@@ -55,11 +77,10 @@ function Main() {
           </div>
           <div className={"mainContainerGRID2"}>
             <div className={"mainContainerGRID2GRID1"}>
-              <h2>
+              <h2 id={"offerHeader"}>
                 Top Offers for October 2023!
               </h2>
             </div>
-
             <div className={"mainContainerGRID2GRID2"}>
             <ProductContainer imgSrc={mainHome} title={"Test"} />
             <ProductContainer imgSrc={mainHome} title={"Test2"} />
@@ -69,7 +90,7 @@ function Main() {
             <ProductContainer imgSrc={mainHome} title={"Test6"} />
               </div>
           </div>
-          <div className={"infoSectionMain bg-dark"}>
+          <div className={"infoSectionMain"}>
             <div style={{gridRow: "1", gridColumn: "1"}} className={"infoSectionMainImgSection"}>
               <div id={"imgROW1"} className={"infoSectionImgContainer"}>
                 <img className={"infoSectionIMG"} src={mainHome} alt="/"/>
@@ -137,7 +158,8 @@ function Main() {
             <h5>Please also note the following important information:</h5>
             <p>
               The displayed price may have increased since the last update.
-              The sale is at the price that the seller indicates for the product on its website at the time of purchase.
+              The sale is at the price that the seller indicates for the product on its website at the time of
+              purchase. <br/>
               It is not technically possible to update the displayed prices in real time.
             </p>
             <h5>Footnotes:</h5>

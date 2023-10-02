@@ -11,11 +11,15 @@ import Offers from "./home/components/SearchResult/Offers.jsx";
 import NotFound from "./home/components/404.jsx";
 
 function App() {
+
+
+
     return(
         <Router>
             <div className={"headerContainer"}>
                 <Header style={{zIndex: "18"}}/>
             </div>
+            <div className={"dark_light_container"}></div>
             <Routes>
                 <Route path="/" element={<Main />} />
                 <Route path="contact" element={<ContactForm />} />
