@@ -125,7 +125,30 @@ function Main() {
                 </p>
               </div>
             </div>
-
+          </div>
+          <div className={"reminderContainer"}>
+            <h5>Important Information:</h5>
+            <p>
+              Please be advised that we may receive a commission if you make a purchase through the links on our site.
+              However, this does not affect the placement of products on our site. We are proud to work with the Amazon EU
+              affiliate/affiliate program. Amazon, Amazon Prime, the Amazon logo and the Amazon Prime logo are registered
+              trademarks of Amazon, Inc. or its affiliates.
+            </p>
+            <h5>Please also note the following important information:</h5>
+            <p>
+              The displayed price may have increased since the last update.
+              The sale is at the price that the seller indicates for the product on its website at the time of purchase.
+              It is not technically possible to update the displayed prices in real time.
+            </p>
+            <h5>Footnotes:</h5>
+            {/* eslint-disable-next-line react/no-unescaped-entities */}
+            *The term "Best" and similar expressions refer only to our possibly subjective personal opinion. <br/>
+            {/* eslint-disable-next-line react/no-unescaped-entities */}
+            ** "Free delivery" means that this is possible under certain conditions at the time of data retrieval from
+            the corresponding provider, but cannot be guaranteed. <br/>
+            An indication in real time is technically not possible. <br/>
+            Shipping costs may vary under certain circumstances (different provider, delivery location, etc.). <br/>
+            The shipping costs ultimately displayed in the further ordering process apply.
           </div>
         </div>
       </>
