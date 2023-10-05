@@ -4,6 +4,8 @@ import ReactLoading from 'react-loading';
 import {Envelope} from "react-bootstrap-icons";
 import SuccessModal from "./successModal.jsx";
 import FailedModal from "./failedModal.jsx";
+import "bootstrap/dist/css/bootstrap.css";
+import "../../App.css"
 
 const ContactForm = () => {
 
@@ -64,7 +66,7 @@ const ContactForm = () => {
   if (submit) {
     countdown.start();
     }
-  }, [submit, status]);
+  }, [submit, status, countdown]);
 
   const handleChange = (event) => {
       setForm({ ...form, option: event.target.value });

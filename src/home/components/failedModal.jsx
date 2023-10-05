@@ -11,7 +11,7 @@ function FailedModal() {
     <>
      {swal({
         title: "Error" ,
-        text: "Something went wrong :( \n Send us your E-Mail directly to: info@sales-detective.info",
+        text: "Something went wrong :/ \n Send us your E-Mail directly to: info@sales-detective.info",
         icon: "error",
         dangerMode: true,
         button: {
