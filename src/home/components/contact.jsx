@@ -14,7 +14,7 @@ const ContactForm = () => {
   }, []);
 
   const [submit, setSubmit] = React.useState(false);
-  const [seconds, setSeconds] = React.useState(2.2);
+  const [seconds, setSeconds] = React.useState(3);
   const [status, setStatus] = React.useState(null);
 
   const [form, setForm] = React.useState( {
@@ -22,6 +22,7 @@ const ContactForm = () => {
       successUrl: null
   })
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const countdown = { // create a new dict
   start: function() {  // with a start-function
     const interval = setInterval(() => {  // set intervall of 1000ms
@@ -49,7 +50,7 @@ const ContactForm = () => {
       message: message.value,
     }
 
-    console.log("data:" + conFom)
+    console.log("data:", conFom)
 
     try {
       const response = await axios.post("https://lesterwired.pythonanywhere.com/contact/", conFom);
@@ -59,8 +60,8 @@ const ContactForm = () => {
       setStatus(response.data.status);
     } catch (error) {
       console.log(error);
-      }
-    };
+    }
+  };
 
   useEffect(() => {
   if (submit) {
@@ -72,9 +73,6 @@ const ContactForm = () => {
       setForm({ ...form, option: event.target.value });
   };
 
-  console.log("status:" + status)
-  console.log("submit:" + submit)
-  console.log("sec:" + seconds)
   return (
     <div className="container mt-5">
         {submit ? (
@@ -83,15 +81,15 @@ const ContactForm = () => {
                   <ReactLoading type={"spin"} color={"rgb(0, 0, 255"} height={150} width={150} />
                 </div>
             ) : (
-                status === 201 ? (
-                    <div className="container mt-5">
-                        <SuccessModal />
-                    </div>
-                ) : (
+              status === 201 ? (
                   <div className="container mt-5">
-                      <FailedModal />
-                    </div>
-                )
+                      <SuccessModal />
+                  </div>
+              ) : (
+                <div className="container mt-5">
+                    <FailedModal />
+                  </div>
+              )
             )
       ) : (
         <div className="container mt-5">
@@ -145,7 +143,7 @@ const ContactForm = () => {
               <div className={"alternative_mail_container"}>
               <p>
                 Problems with Contact form? Send us your E-Mail directly:
-                <span style={{color: "rgb(255, 0, 0)"}}>&nbsp;info@sales-detective.info</span>
+                <span style={{color: "rgb(255, 0, 0)"}}>&nbsp;info@sales-detective.live</span>
               </p>
                 </div>
             </div>

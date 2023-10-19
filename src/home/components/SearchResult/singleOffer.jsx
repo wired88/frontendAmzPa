@@ -2,6 +2,17 @@ import mainHome from "../../../assets/mainHome.jpg";
 import amzWhiteLogo from "../../../assets/amzWhiteLogo.png";
 import stars from "../../../assets/stars.png";
 import {Carousel} from "react-bootstrap";
+
+
+<iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin"
+        style="width:120px;height:240px;" marginWidth="0" marginHeight="0" scrolling="no"
+        frameBorder="0" src="//ws-eu.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operati
+        on=GetAdHtml&MarketPlace=DE&source=ss&ref=as_ss_li_til&ad_type=product_link&tracking_id=salesdetect
+        iv-21&language=de_DE&marketplace=amazon&region=DE&placement=B088V8P8XQ&asins=B088V8P8XQ&linkId=c9c6
+        8be537042aa436d96b80cb2fbc6d&show_border=true&link_opens_in_new_window=true"></iframe>
+
+
+
 // eslint-disable-next-line react/prop-types
 function SingleOffer({number}) {
   const responsive = {
