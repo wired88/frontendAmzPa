@@ -3,7 +3,7 @@ import amzWhiteLogo from "../../../assets/amzWhiteLogo.png";
 import stars from "../../../assets/stars.png";
 import {Carousel} from "react-bootstrap";
 
-
+/*
 <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin"
         style="width:120px;height:240px;" marginWidth="0" marginHeight="0" scrolling="no"
         frameBorder="0" src="//ws-eu.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operati
@@ -11,10 +11,10 @@ import {Carousel} from "react-bootstrap";
         iv-21&language=de_DE&marketplace=amazon&region=DE&placement=B088V8P8XQ&asins=B088V8P8XQ&linkId=c9c6
         8be537042aa436d96b80cb2fbc6d&show_border=true&link_opens_in_new_window=true"></iframe>
 
-
+*/
 
 // eslint-disable-next-line react/prop-types
-function SingleOffer({number}) {
+export default function SingleOffer({number}) {
   const responsive = {
         desktop: {
             breakpoint: { max: 3000, min: 1024 },
@@ -88,22 +88,29 @@ function SingleOffer({number}) {
           </div>
       </div>
       <div className={"informationContainer bg-dark"}>
-        <div className={"ul-container"}>
-          <div className={"productHeading"}>
-            <p className={"headerText"}>
-              Lorem ipsum dolor sit amet,
-              consectetur adipisicing elit. Pariatur, voluptatibus. Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, ipsum dolor sit amet,
-            </p>
-          </div>
-          <div className={"ul"}>
-            <ul>
-              <li>Lorem ipsum dolor sit.</li>
-              <li>Lorem ipsum.</li>
-              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum?</li>
-            </ul>
-          </div>
+        <div className={"productHeading"}>
+          <p className={"headerText"}>
+            Lorem ipsum dolor sit amet,
+            consectetur adipisicing elit. Pariatur, voluptatibus. Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, ipsum dolor sit amet,
+          </p>
         </div>
-        <a className={"show_more_a"} href="#">Show more</a>
+        <div className={"ul"}>
+          <ul>
+            <li>Lorem ipsum dolor sit.</li>
+            <li>Lorem ipsum.</li>
+            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum?</li>
+            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum?</li>
+            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum?</li>
+            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum?</li>
+            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum?</li>
+            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum?</li>
+            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum?</li>
+            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum?</li>
+            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum?</li>
+            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum?</li>
+          </ul>
+        </div>
+        {/*<a className={"show_more_a"} href="#">Show more</a>*/}
         <div className={"recensionsContainer"}>
           <img className={"amazonLogo"} src={amzWhiteLogo} alt="amzImg"/>
           <img className={"stars"} src={stars} alt="star.png"/>
@@ -114,4 +121,3 @@ function SingleOffer({number}) {
   );
 }
 
-export default SingleOffer;
