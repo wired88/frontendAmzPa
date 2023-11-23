@@ -55,7 +55,7 @@ function Main() {
           </div>
           <div className={"mainContainerGRID2"}>
             <div className={"mainContainerGRID2GRID1"}>
-              <h2 id={"offerHeader"}>
+              <h2 id={"offerHeader"} style={{textAlign: "center"}}>
                 Top Offers for October 2023!
               </h2>
             </div>
@@ -68,12 +68,14 @@ function Main() {
             <ProductContainer imgSrc={mainHome} title={"Test6"} />
               </div>
           </div>
+
           <div className={"infoSectionMain"}>
             <div style={{gridRow: "1", gridColumn: "1"}} className={"infoSectionMainImgSection"}>
               <div id={"imgROW1"} className={"infoSectionImgContainer"}>
                 <img className={"infoSectionIMG"} src={mainHome} alt="/"/>
               </div>
             </div>
+
             <div style={{gridRow: "1", gridColumn: "2 / 4"}} className={"infoSectionMainTextSection"}>
               <div id={"textROW1"}>
                 <h4 style={{right: "12%"}}>Entdecken Sie die Welt der Top 10 Angebote, . . . </h4>
@@ -102,6 +104,7 @@ function Main() {
                 </p>
               </div>
             </div>
+
             <div style={{gridRow: "2", gridColumn: "3"}} className={"infoSectionMainImgSection"}>
               <div id={"imgROW2"} className={"infoSectionImgContainer"}>
                 <img className={"infoSectionIMG"} src={mainHome} alt="/"/>
@@ -113,6 +116,7 @@ function Main() {
                 <img className={"infoSectionIMG"} src={mainHome} alt="/"/>
               </div>
             </div>
+
             <div style={{gridRow: "3", gridColumn: "2 / 4"}} className={"infoSectionMainTextSection"}>
               <div id={"imgROW3"} >
                 <h4 style={{right: "20%"}}>... easy and fast!</h4>
@@ -125,6 +129,7 @@ function Main() {
               </div>
             </div>
           </div>
+
           <div className={"reminderContainer"}>
             <h5>Important Information:</h5>
             <p>
@@ -151,6 +156,7 @@ function Main() {
             The shipping costs ultimately displayed in the further ordering process apply.
           </div>
         </div>
+
       </>
     );
 }

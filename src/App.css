@@ -1041,37 +1041,83 @@ bg linear g4radient 2
         flex-grow: 1;
     }
 }
-
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 @media (max-width: 1200px) {
-    .ul {
-        top: 8%;
-        display: flex;
-        position: relative;
-        justify-content: flex-start;
-        align-items: flex-end;
-        border-top: 1px solid rgba(255, 255, 255, .14);
 
-
-    }
-    .informationContainer {
-        grid-column: 2;
-        grid-row: 1 / 3;
-        display: flex;
-        background-color: rgb(52, 58, 64);
-        flex-direction: column;
-        padding: 2% 3% 0 2%;
-        border: 1px solid blue;
-
-    }
-    .ul ul li {
-        width: 100%;
-        height: auto;
+     .ul {
+        margin-top: 0;
+         top: 5px;
+         position: relative;
+         display: flex;
+         align-items: flex-start;
+         padding: 5px 1% 3px 0;
+         justify-content: flex-start;
+         overflow: hidden;
+     }
+     .ul ul {
+         text-align: start;
+         display: flex;
+         justify-content: flex-start;
+         align-items: flex-start;
+         list-style: revert;
+         flex-direction: column;
+         left: 0;
+     }
+     .ul ul li {
+        text-align: start;
         color: rgba(255, 255, 255, .9);
         font-size: .6rem;
         border-bottom: 1px solid rgba(0, 0, 0, .1);
         padding: 0;
-        margin: 0;
-        flex-grow: 1;
+         left: 0;
+         position: relative;
+     }
+     .amazonLogo {
+         width: 50%;
+         height: 25%;
+     }
+        .recensionsContainer button{
+            font-size: 10px;
+            padding: 3px 5px;
+            font-weight: normal;
+            margin-top: 0;
+        }
+     .informationContainer {
+        grid-column: 2;
+        grid-row: 1 / 3;
+        display: flex;
+        background-color: rgb(52, 58, 64);
+
+        flex-direction: column;
+        padding: 2% 3% 0 2%;
+        border: 1px solid blue;
+
+     }
+     .productHeading {
+         grid-row: 1;
+         grid-column:1 / 2;
+         padding: 2% 5% 1% 0;
+         display: block;
+         align-items: flex-start;
+         height: 16vh;
+         text-align: start;
+         justify-content: flex-start;
+        overflow: hidden;
+         flex-grow: 1;
+     }
+     .headerText {
+         line-height: 16px;
+         font-size: 15px;
+     }
+     .carouselContainer {
+        width: 100%;
+        height: 50%;
+        overflow: hidden
+    }
+
+     .stars {
+        width: 40%;
+        height: 25%
     }
 }
 
@@ -1140,6 +1186,86 @@ bg linear g4radient 2
         object-position: center;
         object-fit: cover;
     }
+     .recensionsContainer {
+        display: flex;
+         justify-content: center;
+         align-items: center;
+     }
+     .ul {
+        margin-top: 0;
+         top: 5px;
+         position: relative;
+         display: flex;
+         align-items: flex-start;
+         padding: 5px 1% 3px 0;
+         justify-content: flex-start;
+         overflow: hidden;
+     }
+     .ul ul {
+         text-align: start;
+         display: flex;
+         justify-content: flex-start;
+         align-items: flex-start;
+         list-style: revert;
+         flex-direction: column;
+         left: 0;
+     }
+     .ul ul li {
+        text-align: start;
+        color: rgba(255, 255, 255, .9);
+        font-size: .6rem;
+        border-bottom: 1px solid rgba(0, 0, 0, .1);
+        padding: 0;
+         left: 0;
+         position: relative;
+     }
+     .amazonLogo {
+         width: 50%;
+         height: 25%;
+     }
+        .recensionsContainer button{
+            font-size: 10px;
+            padding: 3px 5px;
+            font-weight: normal;
+            margin-top: 0;
+        }
+     .informationContainer {
+        grid-column: 2;
+        grid-row: 1 / 3;
+        display: flex;
+        background-color: rgb(52, 58, 64);
+
+        flex-direction: column;
+        padding: 2% 3% 0 2%;
+        border: 1px solid blue;
+
+     }
+     .productHeading {
+         grid-row: 1;
+         grid-column:1 / 2;
+         padding: 2% 5% 1% 0;
+         display: block;
+         align-items: flex-start;
+         height: 16vh;
+         text-align: start;
+         justify-content: flex-start;
+        overflow: hidden;
+         flex-grow: 1;
+     }
+     .headerText {
+         line-height: 16px;
+         font-size: 15px;
+     }
+     .carouselContainer {
+        width: 100%;
+        height: 50%;
+        overflow: hidden
+    }
+
+     .stars {
+        width: 40%;
+        height: 25%
+    }
 }
 
 @media (max-width: 550px) {
@@ -1152,6 +1278,7 @@ bg linear g4radient 2
         justify-content: flex-start;
         align-items: flex-start;
         white-space: pre-line;
+        border: 1px solid red;
     }
     .productIndex {
         width: 40%;
@@ -1164,6 +1291,9 @@ bg linear g4radient 2
         z-index: 4;
         background-color: rgba(0, 0, 0, .2);
     }
+    .headerText {
+        font-size: 20px;
+    }
      .productImageContainer {
         grid-column: 1;
         grid-row: 1 / 3;
@@ -1173,16 +1303,56 @@ bg linear g4radient 2
 
     }
      .recensionsContainer {
-
+        display: flex;
+         justify-content: center;
+         align-items: center;
      }
      .ul {
-
+         border: 1px solid orange;
+        margin-top: 0;
+         top: 5px;
+         position: relative;
+         display: flex;
+         align-items: flex-start;
+         padding: 5px 1% 3px 0;
+         justify-content: flex-start;
+         overflow: hidden;
      }
+     .ul ul {
+         position: relative;
+         text-align: start;
+         display: flex;
+         justify-content: flex-start;
+         align-items: flex-start;
+         list-style: revert;
+         flex-direction: column;
+         left: -1px;
+     }
+     .ul ul li {
+        text-align: start;
+        color: rgba(255, 255, 255, .9);
+        font-size: .6rem;
+        border-bottom: 1px solid rgba(0, 0, 0, .1);
+        padding: 0;
+         left: -20px;
+         position: relative;
+     }
+     .amazonLogo {
+         width: 50%;
+         height: 25%;
+     }
+        .recensionsContainer button{
+            font-size: 10px;
+            padding: 3px 5px;
+            font-weight: normal;
+            margin-top: 0;
+        }
      .informationContainer {
         grid-column: 2;
         grid-row: 1 / 3;
         display: flex;
         background-color: rgb(52, 58, 64);
+
         flex-direction: column;
         padding: 2% 3% 0 2%;
         border: 1px solid blue;
@@ -1192,13 +1362,13 @@ bg linear g4radient 2
          grid-row: 1;
          grid-column:1 / 2;
          padding: 2% 5% 1% 0;
-         display: flex;
+         display: block;
          align-items: flex-start;
          height: 16vh;
+         text-align: start;
          justify-content: flex-start;
-        border: 1px solid red;
         overflow: hidden;
-        white-space: pre-line;
+         flex-grow: 1;
      }
      .headerText {
          line-height: 16px;
@@ -1209,14 +1379,117 @@ bg linear g4radient 2
         height: 50%;
         overflow: hidden
     }
-     .amazonLogo {
-        width: 40%;
-        height: 15%;
-    }
-     .stars {
-        width: 20%;
-        height: 10%
-    }
 
+     .stars {
+        width: 40%;
+        height: 25%
+    }
 }
 
+.prev_col1 {
+    display: flex;
+    flex-direction: column;
+    grid-column: 1;
+    grid-row: 1;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.prev_col2 {
+    grid-column: 2;
+    grid-row: 1;
+    padding: 50px 20px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.codeInput {
+    background: #3f3f3f;
+    outline: none;
+    color: white;
+    padding: 10px;
+    border-radius: 14px;
+
+}
+.outputOutlineContainer {
+    padding: 10px 20px 30px 20px;
+    border-radius: 14px;
+    display: flex;
+    width: 740px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.iframeCodeOutput {
+    width: 700px;
+    height: 700px;
+    padding: 5px 10px;
+    background: #3f3f3f;
+    border: 1px solid white;
+    outline: 0;
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.codeInputDIV {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content:flex-start;
+    margin-bottom: 10px;
+    padding: 10px 15px 30px 15px;
+    border-radius: 14px;
+}
+.main_container_p_real {
+    border-radius: 14px;
+    width: 90%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 50% 50%;
+    justify-content: flex-end;
+    align-items: center;
+    background: #d3d3d3;
+    padding: 50px 20px
+}
+.labelPreview {
+    color: white;
+}
+.inputContainer {
+    grid-column: 1;
+    grid-row: 1;
+    margin: 50px 0 50px 15px;
+    position: relative;
+}
+
+.inputPreviewContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 18px;
+    border: 1px solid black;
+    padding: 10px 80px 10px 10px;
+    width: 800px;
+    flex-direction: row;
+}
+
+.previewInput {
+    border-radius: 14px;
+    outline: none;
+    border: none;
+}
+
+.synthaxHighlighter {
+    position: absolute;
+}
+
+.imageInputzField {
+    height: 200px;
+    width: 200px;
+    background: #1c4ca0;
+    z-index: 90;
+    cursor: pointer;
+    position: absolute;
+}

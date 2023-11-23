@@ -10,7 +10,7 @@ import FAQ from "./home/components/faq.jsx";
 import Offers from "./home/components/SearchResult/Offers.jsx";
 import NotFound from "./home/components/404.jsx";
 import {useState} from "react";
-
+import {PreviewContainer} from "./home/components/preview.jsx";
 function App() {
 
   const [dark_mode_bool, set_dark_mode_bool] = useState(false);
@@ -50,6 +50,7 @@ function App() {
               <Route path="offers" element={<Offers />} />
               <Route path="faq" element={<FAQ />} />
               <Route path="*" element={<NotFound />} />
+              <Route path="preview" element={<PreviewContainer />} />
           </Routes>
           <Footer/>
       </Router>

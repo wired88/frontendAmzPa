@@ -2,6 +2,7 @@ import mainHome from "../../../assets/mainHome.jpg";
 import amzWhiteLogo from "../../../assets/amzWhiteLogo.png";
 import stars from "../../../assets/stars.png";
 import {Carousel} from "react-bootstrap";
+import {useCallback} from "react";
 
 /*
 <iframe sandbox="allow-popups allow-scripts allow-modals allow-forms allow-same-origin"
@@ -33,12 +34,49 @@ export default function SingleOffer({number}) {
         }
     };
 
-  const redirect = () => {
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const redirect = useCallback(() => {
     window.location.href = "https://amazon.com"
-  }
+  })
 
   return(
-    <section className={"productElement bg-dark"} onClick={redirect} style={{cursor: "pointer"}}>
+      <div className="productcontainer" onClick={redirect} style={{ height: "30vh",  border: "1px solid red" }}>
+            <div className="row">
+              <div className="col-sm-3 mr-3" style={{ height: "30vh", maxWidth: "30%"}}>
+                <img src={mainHome} className={"infoSectionIMG"} alt="Product Image"/>
+              </div>
+              <div className="col-sm-9 ml-7">
+                <h2>
+                  item.title
+                </h2>
+                <p>
+                  item.description
+                </p>
+                <p><strong>Index:</strong> item.index</p>
+                <a href="#" className="btn btn-primary">
+                  <button className></button>
+                </a>
+              </div>
+            </div>
+      </div>
+
+
+
+  );
+}
+/*
+     <div className="productcontainer">
+            <div className="row">
+              <div className="col-sm-3">
+                <img src={mainHome} className={"infoSectionIMG"} alt="Product Image" />
+              </div>
+              <div className="col-sm-9">
+              <h2>Product Name</h2> <p>Description text...</p>
+              <p><strong>Index:</strong> 1</p>
+              <a href="#" className="btn btn-primary">Call to Action</a>
+              </div>
+              </div>
+            </div>  <section className={"productElement bg-dark"} onClick={redirect} style={{cursor: "pointer"}}>
       <div className={"productIndex"}>
         <h4>
           {number}.
@@ -110,7 +148,6 @@ export default function SingleOffer({number}) {
             <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum?</li>
           </ul>
         </div>
-        {/*<a className={"show_more_a"} href="#">Show more</a>*/}
         <div className={"recensionsContainer"}>
           <img className={"amazonLogo"} src={amzWhiteLogo} alt="amzImg"/>
           <img className={"stars"} src={stars} alt="star.png"/>
@@ -118,6 +155,5 @@ export default function SingleOffer({number}) {
         </div>
       </div>
     </section>
-  );
-}
+ */
 

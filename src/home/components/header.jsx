@@ -7,8 +7,23 @@ import final_logo from "../../assets/final_logo.png";
 import {Envelope} from "react-bootstrap-icons";
 import amzSmile from "../../assets/amzSmile.png";
 import {useState} from "react";
+import axios from "axios";
 
 function Header() {
+  const data = {}
+  const create = async () => {
+    try {
+      const response = await axios.post("http://127.0.0.1:8000/create-objects/", {data})
+        .then(() => {
+          console.error("Response:", response.data.response)
+        }).catch((error) => {
+          console.error("Error occurred:", error)
+        })
+    } catch (error) {
+      console.error("Error occurred:", error)
+    }
+  }
+
 
   return (
     <>
@@ -32,6 +47,10 @@ function Header() {
             </Nav.Link>
             <Nav.Link href={"/contact"} id={"contactField"} style={{color: "rgba(255, 255, 255, .8)"}}>
               Contact us
+              <Envelope style={{margin: "auto 5px", marginRight: "5vmin"}}/>
+            </Nav.Link>
+            <Nav.Link href={"#"} id={"createBtn"} onClick={create} style={{color: "rgba(255, 255, 255, .8)"}}>
+              create
               <Envelope style={{margin: "auto 5px", marginRight: "5vmin"}}/>
             </Nav.Link>
             <Form className="d-flex">

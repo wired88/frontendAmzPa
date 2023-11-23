@@ -1,8 +1,20 @@
-import SingleOffer from "./singleOffer.jsx";
+//import SingleOffer from "./singleOffer.jsx";
 import {useEffect} from "react";
+//import axios from "axios"; , setState, useCallback
 
 function Offers() {
+  //let loading = false;
+  const first = true;
+
+
+
+
+
   useEffect(() => {
+    if (first) {
+     // let loading = true;
+      // function
+    }
     document.title = 'Deals';
   }, []);
 
@@ -19,16 +31,10 @@ function Offers() {
         </p>
       </div>
       <div className={"searchResultContent"}>
-        <SingleOffer number={"1"} />
-        <SingleOffer number={"2"} />
-        <SingleOffer number={"3"} />
-        <SingleOffer number={"4"} />
-        <SingleOffer number={"5"} />
-        <SingleOffer number={"6"} />
-        <SingleOffer number={"7"} />
-        <SingleOffer number={"8"} />
-        <SingleOffer number={"9"} />
-        <SingleOffer number={"10"} />
+
+
+
+
       </div>
     </div>
       <div className={"infoTextContentPage"}>
@@ -45,8 +51,15 @@ Bitte beachten Sie zudem folgende wichtige Hinweise:
 3. Es ist technisch nicht möglich, die angezeigten Preise in Echtzeit zu aktualisieren.
 
 Fussnoten:
-          {/* eslint-disable-next-line react/no-unescaped-entities */}
-* der ggf. verwendete Ausdruck "Beste" u.ä. bezieht sich nur auf unsere ggf. subjektive persönliche Meinung.
+          {/*
+            {response.data.map((item) => {
+
+
+        })}
+
+
+           eslint-disable-next-line react/no-unescaped-entities */}
+* der ggf. verwendete Ausdruck Beste u.ä. bezieht sich nur auf unsere ggf. subjektive persönliche Meinung.
           {/* eslint-disable-next-line react/no-unescaped-entities */}
 ** "Kostenfreie Lieferung" bedeutet, dass dies unter gegebenen Voraussetzungen zum Zeitpunkt des Datenabrufs vom entsprechenden Anbieter möglich ist, aber nicht garantiert werden kann. Eine Angabe in Echtzeit ist technisch nicht möglich. Die Versandkosten können unter bestimmten Umständen (abweichender Anbieter, Lieferort etc.) unterschiedlich sein. Es gelten die letztendlich im weiteren Bestellprozess angezeigten Versandkosten.
         </p>
